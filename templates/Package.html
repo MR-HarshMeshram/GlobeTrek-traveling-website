@@ -1,0 +1,154 @@
+{% include 'header.html' %}
+
+<div class="heading" style="background:url(/static/images/header-bg-2.png) no-repeat">
+   <h1>packages</h1>
+</div>
+
+<!-- packages section starts  -->
+
+<section class="packages">
+
+   <h1 class="heading-title">top destinations</h1>
+
+   <div class="box-container">
+      {% for i in  d %}
+      <div class="box">
+         <div class="image">
+            <img src='/media/{{i.destinations_image}}' alt="">
+         </div>
+         <div class="content">
+            <h3>{{i.destinations_name}}</h3>
+            <p>{{i.destinations_dis}}</p>
+            <a href="book" class="btn">book now</a>
+         </div>
+      </div>
+      {% endfor %}
+      {% comment %} <div class="box">
+         <div class="image">
+            <img src="/static/images/img-2.jpg" alt="">
+         </div>
+         <div class="content">
+            <h3>adventure & tour</h3>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Perferendis, perspiciatis!</p>
+            <a href="book" class="btn">book now</a>
+         </div>
+      </div>
+
+      <div class="box">
+         <div class="image">
+            <img src="/static/images/img-3.jpg" alt="">
+         </div>
+         <div class="content">
+            <h3>adventure & tour</h3>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Perferendis, perspiciatis!</p>
+            <a href="book" class="btn">book now</a>
+         </div>
+      </div>
+
+      <div class="box">
+         <div class="image">
+            <img src="/static/images/img-4.jpg" alt="">
+         </div>
+         <div class="content">
+            <h3>adventure & tour</h3>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Perferendis, perspiciatis!</p>
+            <a href="book" class="btn">book now</a>
+         </div>
+      </div>
+
+      <div class="box">
+         <div class="image">
+            <img src="/static/images/img-5.jpg" alt="">
+         </div>
+         <div class="content">
+            <h3>adventure & tour</h3>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Perferendis, perspiciatis!</p>
+            <a href="book" class="btn">book now</a>
+         </div>
+      </div>
+
+      <div class="box">
+         <div class="image">
+            <img src="/static/images/img-6.jpg" alt="">
+         </div>
+         <div class="content">
+            <h3>adventure & tour</h3>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Perferendis, perspiciatis!</p>
+            <a href="book" class="btn">book now</a>
+         </div>
+      </div>
+
+      <div class="box">
+         <div class="image">
+            <img src="/static/images/img-7.jpg" alt="">
+         </div>
+         <div class="content">
+            <h3>adventure & tour</h3>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Perferendis, perspiciatis!</p>
+            <a href="book" class="btn">book now</a>
+         </div>
+      </div>
+
+      <div class="box">
+         <div class="image">
+            <img src="/static/images/img-8.jpg" alt="">
+         </div>
+         <div class="content">
+            <h3>adventure & tour</h3>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Perferendis, perspiciatis!</p>
+            <a href="book.php" class="btn">book now</a>
+         </div>
+      </div>
+
+      <div class="box">
+         <div class="image">
+            <img src="/static/images/img-9.jpg" alt="">
+         </div>
+         <div class="content">
+            <h3>adventure & tour</h3>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Perferendis, perspiciatis!</p>
+            <a href="book.php" class="btn">book now</a>
+         </div>
+      </div>
+
+      <div class="box">
+         <div class="image">
+            <img src="/static/images/img-10.jpg" alt="">
+         </div>
+         <div class="content">
+            <h3>adventure & tour</h3>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Perferendis, perspiciatis!</p>
+            <a href="book.php" class="btn">book now</a>
+         </div>
+      </div>
+
+      <div class="box">
+         <div class="image">
+            <img src="/static/images/img-11.jpg" alt="">
+         </div>
+         <div class="content">
+            <h3>adventure & tour</h3>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Perferendis, perspiciatis!</p>
+            <a href="book.php" class="btn">book now</a>
+         </div>
+      </div>
+
+      <div class="box">
+         <div class="image">
+            <img src="/static/images/img-12.jpg" alt="">
+         </div>
+         <div class="content">
+            <h3>adventure & tour</h3>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Perferendis, perspiciatis!</p>
+            <a href="book.php" class="btn">book now</a>
+         </div>
+      </div>
+
+   </div>
+
+   <div class="load-more"><span class="btn">load more</span></div> {% endcomment %}
+
+</section>
+
+<!-- packages section ends -->
+{% include 'footer.html' %}

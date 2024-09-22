@@ -1,0 +1,160 @@
+{% include 'header.html' %}
+
+<div id="demo" class="carousel slide" data-ride="carousel">
+   <ul class="carousel-indicators">
+     <li data-target="#demo" data-slide-to="0" class="active"></li>
+     <li data-target="#demo" data-slide-to="1"></li>
+     <li data-target="#demo" data-slide-to="2"></li>
+   </ul>
+   <div class="carousel-inner">
+     <div class="carousel-item active">
+       <img src="static/images/home-slide-1.jpg" alt="Los Angeles"width="1550" height="700">
+       <div class="carousel-caption">
+         <h3>Ethical Hacking</h3>
+         <p>Ethical hacking involves an authorized attempt to gain unauthorized access to a computer syste</p>
+       </div>   
+     </div>
+     <div class="carousel-item">
+       <img src="static/images/home-slide-2.jpg" alt="Chicago" width="1550" height="700">
+       <div class="carousel-caption">
+         <h3>Computer Maintenance</h3>
+         <p>Computer maintenance is the practice of keeping computers in a good state of repair. </p>
+       </div>   
+     </div>
+     <div class="carousel-item">
+       <img src="static/images/home-slide-3.jpg" alt="New York" width="1550" height="700">
+       <div class="carousel-caption">
+         <h3>Artificial intelligence</h3>
+         <p>the simulation of human intelligence in machines that are programmed to think like humans and mimic their actions.</p>
+       </div>   
+     </div>
+   </div>
+   <a class="carousel-control-prev" href="#demo" data-slide="prev">
+     <span class="carousel-control-prev-icon"></span>
+   </a>
+   <a class="carousel-control-next" href="#demo" data-slide="next">
+     <span class="carousel-control-next-icon"></span>
+   </a>
+ </div>
+
+</section>
+
+<!-- home section ends -->
+
+<!-- services section starts  -->
+
+<section class="services">
+
+   <h1 class="heading-title"> our services </h1>
+
+   <div class="box-container">
+
+      <div class="box">
+         <img src="images/icon-1.png" alt="">
+         <h3>adventure</h3>
+      </div>
+
+      <div class="box">
+         <img src="images/icon-2.png" alt="">
+         <h3>tour guide</h3>
+      </div>
+
+      <div class="box">
+         <img src="static/images/icon-3.png" alt="">
+         <h3>trekking</h3>
+      </div>
+
+      <div class="box">
+         <img src="static/images/icon-4.png" alt="">
+         <h3>camp fire</h3>
+      </div>
+
+      <div class="box">
+         <img src="static/images/icon-5.png" alt="">
+         <h3>off road</h3>
+      </div>
+
+      <div class="box">
+         <img src="static/images/icon-6.png" alt="">
+         <h3>camping</h3>
+      </div>
+
+   </div>
+
+</section>
+
+<!-- services section ends -->
+
+<!-- home about section starts  -->
+
+<section class="home-about">
+
+   <div class="image">
+      <img src="static/images/about-img.jpg" alt="">
+   </div>
+
+   <div class="content">
+      <h3>about us</h3>
+      <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Expedita et, recusandae nobis fugit modi quibusdam ea assumenda, nulla quisquam repellat rem aliquid sequi maxime sapiente autem ipsum? Nobis, provident voluptate?</p>
+      <a href="about" class="btn">read more</a>
+   </div>
+
+</section>
+
+<!-- home about section ends -->
+
+<!-- home packages section starts  -->
+
+<section class="home-packages">
+
+   <h1 class="heading-title"> our packages </h1>
+
+   <form method="get">
+       
+      <input  name="ip" type="text" value=""><br><br>
+      <input  name="search" type="submit" value="Search">
+      
+    </form>
+    <br>
+
+   <div class="box-container">
+      {% for i in  packeg %}
+      <div class="box">
+         <div class="image">
+            <img src='/media/{{i.package_image}}' alt="">
+         </div>
+         <div class="content">
+            <h3>{{i.package_name}}</h3>
+            <p>{{i.package_dis}}</p>
+            <a href="packagedet/{{i.id}}" class="btn">book now</a>
+         </div>
+      </div>
+      {% empty %}
+        not found 
+      {% endfor %}
+
+</section>
+<nav method="get" name='page' >
+   <ul class="pagination">
+     <li class="page-item  ">
+       <a class="page-link" href="" tabindex="-1">Previous</a>
+     </li>
+     <li class="page-item  ">
+      <a class="page-link" href="/?page=1" tabindex="-1">first</a>
+    </li>
+     <li class="page-item active"><a class="page-link" href="/?page=1">1</a></li>
+     {% comment %} <li class="page-item disabled">
+       <a class="page-link" href="/?page=1">2 <span class="sr-only">(current)</span></a>
+     </li> {% endcomment %}
+     <li class="page-item default"><a class="page-link" href="/?page=2">2</a></li>
+     <li class="page-item disabled">
+       <a class="page-link" href="#">Next</a>
+     </li>
+
+   </ul>
+ </nav>
+
+<!-- home offer section ends -->
+
+{% include "footer.html" %}
+

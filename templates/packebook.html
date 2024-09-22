@@ -1,0 +1,19 @@
+{% include 'header.html' %}
+
+   <section class="home-packages">
+   
+      <h1 class="heading-title">{{pc.package_name}}  </h1>
+   
+      <div class="box-container">
+
+         <div class="box">
+            <div class="image">
+               <img src='/media/{{pc.package_image}}' alt="">
+            </div>
+            <div class="content">
+               <h3>{{pc.package_name}}</h3>
+               <p>{{pc.package_dis}}</p>
+            </div>
+         </div>
+
+   </section>    
